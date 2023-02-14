@@ -1,15 +1,20 @@
 const mongoose=require("mongoose");
 
 
-const vendedor=moongoose.Schema({
+const vendedor=mongoose.Schema({
 
+    id_vendedor: {
+
+        type: Number,
+        unique:true
+    },
     nombre: String,
     apellidos: String,
-    telefono: {
-        type:Number,
-        unique:true
-    }, 
-    created_at:Date.now();
+    fechana: Date,
+    genero: String,
+    nombre_tienda: String,
+    telefono: Number,
+    created_at:Date
 
 })
 

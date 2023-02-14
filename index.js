@@ -14,14 +14,14 @@ const app=require("./app");
 
 const port=process.env.PORT || 4000;
 mongoose.set("strictQuery",false);
-mongoose.connect(`mongodb://${IP_SERVER}:${DB_PORT}/${DB_NAME}`);
-if(error) throw error;
+mongoose.connect(`mongodb://${IP_SERVER}:${DB_PORT}/${DB_NAME}`, (error)=>{
+    if(error) throw error;
 
 app.listen(port, ()=>{
 
     console.log("API REST DE LA APP FUNCIONANDO");
     console.log("==============================");
-    console.log(`http://${IP_SERVER}:${port}/api/${{API_VERSION}}`,(error)=>);
+    console.log(`http://${IP_SERVER}:${port}/api/${API_VERSION}`);
 
 })
-
+})
